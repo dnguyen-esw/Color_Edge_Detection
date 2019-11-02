@@ -85,7 +85,7 @@ namespace XLA_Project08
             return edge;
         }
 
-        public Bitmap Edge_Detect_Sobel_v2(Bitmap HinhGoc, int D0)
+        public Bitmap Edge_Detect_Sobel_v2(Bitmap HinhGoc, int D0)//code rút gọn
         {
             //sobel gx
             int[,] dx = new int[3, 3];
