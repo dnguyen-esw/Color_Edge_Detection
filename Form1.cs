@@ -67,13 +67,7 @@ namespace XLA_Project08
                     gxx = Math.Pow(gxR, 2) + Math.Pow(gxG, 2) + Math.Pow(gxB, 2);
                     gyy = Math.Pow(gyR, 2) + Math.Pow(gyG, 2) + Math.Pow(gyB, 2);
                     gxy = gxR * gyR + gxG * gyG + gxB * gyB;
-                    //double theta=2*gxy/(gxx-gyy)
-                    double theta = 0.5*Math.Atan2(2 * gxy, gxx - gyy);
-
-                    //theta = Math.Abs(theta)+0.5*Math.PI;
-                    double z = theta * 180 / Math.PI;
-                    Console.WriteLine(z);
-                    //if (theta < 0) theta = theta + 0.5 * Math.PI;
+                    double theta = 0.5*Math.Atan(2 * gxy/( gxx - gyy));
                     
                     double F0 = Math.Sqrt(((gxx+gyy)+(gxx-gyy)*Math.Cos(2*theta)+2*gxy*Math.Sin(2*theta))/2);
                     if (F0 <= D0)
